@@ -1,13 +1,16 @@
 pipeline {
     agent {
-        docker { image 'python:3.8' }
+        docker {
+            image 'python:3.8'
+        }
     }
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'python --version'
-                sh 'echo Hello Jenkins'
+                sh 'echo "Hello Jenkins"'
             }
         }
     }
 }
+
